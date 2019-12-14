@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css" media="screen and (min-width:1000px)" >
+	<link rel="stylesheet" type="text/css" href="style2.css" media="screen and (max-width:1000px)">
+
+	<div class = "first">
+	<title>貴音さんコミュジェネレータ</title>
+	 <h2>貴音さんコミュジェネレータ</h2>
+	 貴音さんとこみゅにけーしょんしたい。<br><br>＊Chrome推奨
+	</div>
+	<script type="text/javascript" src="createImage.js"></script>
+	
+	<link rel="icon" href="img/favicon.ico" type="image/vnd.microsoft.icon">
+	
+</head>
+<body>
+
+	<div class="select-elements"><br><br>
+		
+		<input type="button" id="haikei" value="背景" onclick="document.getElementById('hk').style.display = 'block';">
+			
+		<input type="button" id="takane" value="貴音さん" onclick="document.getElementById('pose').style.display = 'block';">
+			
+		
+		
+	</div>
+	
+	<div class="review-screen">
+		<canvas id="resultImage" width="1920px" height="1080px" style="background-color:blue;width:480px;height:270px;"></canvas>
+		<canvas id="cv" width="1920px" height="1080px" style="background-color:black; width:480px;height:270px;"></canvas>
+		<canvas id="cv2" width="1920px" height="1080px" style="width:480px;height:270px;"></canvas>
+		<canvas id="cv3" width="1920px" height="1080px" style="width:480px;height:270px;"></canvas>
+		<canvas id="cv4" width="1920px" height="1080px" style="width:480px;height:270px;"></canvas>
+		
+	</div>
+<script>DrawImage("serihu",3,0.7);</script>
+	<div id = "hk" style="display:none">
+				
+				<input type="radio" name="e1" value="entrance" onchange = "whichselect(1)"　checked> エントランス
+				<input type="radio" name="e1" value="jimusho" onchange = "whichselect(1)"> 事務所
+				<input type="radio" name="e1" value="765pro1" onchange = "whichselect(1)"> ７６５プロ
+				<input type="radio" name="e1" value="dress" onchange = "whichselect(1)"> ドレスルーム
+				<input type="radio" name="e1" value="kuukou" onchange = "whichselect(1)"> 空港
+				<input type="radio" name="e1" value="kouen1" onchange = "whichselect(1)"> 公園
+				<input type="radio" name="e1" value="matiya" onchange = "whichselect(1)"> 町屋
+				<input type="radio" name="e1" value="moon1" onchange = "whichselect(1)"> 月１
+				<input type="radio" name="e1" value="moon2" onchange = "whichselect(1)"> 月２
+				<input type="radio" name="e1" value="ryokan" onchange = "whichselect(1)"> 旅館
+				<input type="radio" name="e1" value="jinnja1" onchange = "whichselect(1)"> お祭り
+				<input type="radio" name="e1" value="sea2" onchange = "whichselect(1)"> 海
+				<input type="radio" name="e1" value="yuenchi" onchange = "whichselect(1)"> 遊園地
+				<input type="radio" name="e1" value="tvkyoku2" onchange = "whichselect(1)"> TV局
+				<input type="radio" name="e1" value="imushitu" onchange = "whichselect(1)"> 医務室
+				<input type="radio" name="e1" value="izakaya" onchange = "whichselect(1)"> 居酒屋
+				<input type="radio" name="e1" value="kenrokuen" onchange = "whichselect(1)"> 兼六園
+				<input type="radio" name="e1" value="kusayakyu" onchange = "whichselect(1)"> 河原
+				<input type="radio" name="e1" value="butaisode1" onchange = "whichselect(1)"> 舞台袖
+				<input type="radio" name="e1" value="okujo2" onchange = "whichselect(1)"> 屋上
+				<input type="radio" name="e1" value="theater1" onchange = "whichselect(1)"> シアター
+				<input type="button" value="戻る" onclick="document.getElementById('hk').style.display = 'none';">
+		
+			</div><br>
+	
+	<div id = "pose" style="display:none">
+				
+				<input type="radio" name="e2" value="pose01" onchange = "whichselect(2)"> 困り1
+				<input type="radio" name="e2" value="pose02" onchange = "whichselect(2)"> 真顔1
+				<input type="radio" name="e2" value="pose03" onchange = "whichselect(2)"> ポーズ３
+				<input type="radio" name="e2" value="pose04" onchange = "whichselect(2)"> 真顔2
+				<input type="radio" name="e2" value="pose05" onchange = "whichselect(2)"> 微笑み1
+				<input type="radio" name="e2" value="pose06" onchange = "whichselect(2)"> 通常1
+				<input type="radio" name="e2" value="pose07" onchange = "whichselect(2)"> 横顔１
+				<input type="radio" name="e2" value="pose08" onchange = "whichselect(2)"> 残念
+				<input type="radio" name="e2" value="pose09" onchange = "whichselect(2)"> 伺い
+				<input type="radio" name="e2" value="pose10" onchange = "whichselect(2)"> 通常２
+				<input type="radio" name="e2" value="pose11" onchange = "whichselect(2)"> 笑み
+				<input type="radio" name="e2" value="pose12" onchange = "whichselect(2)"> 目閉じ
+				<input type="radio" name="e2" value="pose13" onchange = "whichselect(2)"> 通常３
+				<input type="radio" name="e2" value="pose14" onchange = "whichselect(2)"> 驚き
+				<input type="radio" name="e2" value="pose15" onchange = "whichselect(2)"> 面妖な
+				<input type="radio" name="e2" value="pose16" onchange = "whichselect(2)"> 目閉じ２
+				<input type="radio" name="e2" value="pose17" onchange = "whichselect(2)"> 半目
+				<input type="radio" name="e2" value="pose18" onchange = "whichselect(2)"> 恥ずかしい
+				<input type="radio" name="e2" value="pose19" onchange = "whichselect(2)"> 恥ずかしい２
+				<input type="radio" name="e2" value="pose20" onchange = "whichselect(2)"> 恥ずかしい３
+				<input type="radio" name="e2" value="pose21" onchange = "whichselect(2)"> かっこ
+				<input type="radio" name="e2" value="pose22" onchange = "whichselect(2)"> ギョエ！
+				<input type="radio" name="e2" value="pose23" onchange = "whichselect(2)"> 面妖な２
+				<input type="radio" name="e2" value="pose24" onchange = "whichselect(2)"> にっこり
+				<input type="radio" name="e2" value="pose25" onchange = "whichselect(2)"> 困り顔
+				<input type="radio" name="e2" value="chihaya1" onchange = "whichselect(2)"> お試し
+				<input type="button" value="戻る" onclick="document.getElementById('pose').style.display = 'none';">
+			</div>
+	
+	<form action="" name="textInput" id="serihu_form">
+		<br>
+			名前：<input type="text" id="dare" size="30" maxlength="6" value="貴音"><br>
+			セリフ：<textarea rows="3" cols="50" id = "serihu">面妖な！</textarea>
+			<input type="button" value="決定" onclick="toDraw()" />
+			
+			<input type="button" value="すべてクリア" onclick="eraseCanvas(['cv','cv2','cv4'])">
+		<br>
+		<input type="button" value="ダウンロード" onclick="download()">
+		
+  
+	<a href="https://twitter.com/share" class="twitter-share-button" data-text="　"data-hashtags="貴音コミュジェネレータ" onclick="download()">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+</form>
+		</body>
+</html>
